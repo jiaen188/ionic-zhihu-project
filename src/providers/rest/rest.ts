@@ -58,8 +58,29 @@ export class RestProvider {
     return this.getUrlReturn(this.apiUrlUserInfo + "?userid=" + userId);
   }
 
+  /**
+   * 更新用户的昵称
+   * 
+   * @param {any} userId 
+   * @param {any} nickname 
+   * @returns {Observable<string[]>} 
+   * @memberof RestProvider
+   */
   updateNickName(userId, nickname): Observable<string[]> {
     return this.getUrlReturn(this.apiUrlUpdateNickName + "?userid=" + userId + '&nickname=' + nickname);
+  }
+
+  /**
+   * 保存提问
+   * 
+   * @param {any} userId 
+   * @param {any} title 
+   * @param {any} content 
+   * @returns {Observable<string[]>} 
+   * @memberof RestProvider
+   */
+  saveQuestion(userId, title, content): Observable<string[]> {
+    return this.getUrlReturn(this.apiUrlQuestionSave + "?userid=" + userId + "&title=" + title + "&content=" + content);
   }
 
   /**

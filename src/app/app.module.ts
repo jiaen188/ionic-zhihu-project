@@ -23,9 +23,10 @@ import { HeadfacePage } from '../pages/headface/headface';
 
 // 导入四个外部加载进来的组件， 具体的安装方法在09-01
 import { File } from '@ionic-native/file';
-import { Transfer, TransferObject } from '@ionic-native/transfer';
+import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
+import { QuestionPage } from '../pages/question/question';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { Camera } from '@ionic-native/camera';
     LoginPage,
     RegisterPage,
     UserPage,
-    HeadfacePage
+    HeadfacePage,
+    QuestionPage
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ import { Camera } from '@ionic-native/camera';
     LoginPage,
     RegisterPage,
     UserPage,
-    HeadfacePage
+    HeadfacePage,
+    QuestionPage
   ],
   providers: [
     StatusBar,
