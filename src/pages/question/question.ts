@@ -5,7 +5,6 @@ import { Storage } from '@ionic/storage/dist/storage';
 import { BaseUI } from '../../common/baseui';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { RestProvider } from '../../providers/rest/rest';
-import { skipUntil } from 'rxjs/operator/skipUntil';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
 
 /**

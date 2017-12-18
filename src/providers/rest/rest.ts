@@ -97,6 +97,20 @@ export class RestProvider {
   }
 
   /**
+   * 请求首页的feeds流
+   * 
+   * @returns {Observable<string[]>} 
+   * @memberof RestProvider
+   */
+  getFeeds(): Observable<string[]> {
+    return this.getUrlReturn(this.apiUrlFeeds);
+  }
+
+  getQuestion(id): Observable<string[]> {
+    return this.getUrlReturn(this.apiUrlGetQuestion + '?id=' + id);
+  }
+
+  /**
    * 全局获取 HTTP 请求的方法
    * @Parry
    * @private

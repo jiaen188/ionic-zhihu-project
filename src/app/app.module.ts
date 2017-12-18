@@ -27,6 +27,7 @@ import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
 import { QuestionPage } from '../pages/question/question';
+import { DetailsPage } from '../pages/details/details';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { QuestionPage } from '../pages/question/question';
     RegisterPage,
     UserPage,
     HeadfacePage,
-    QuestionPage
+    QuestionPage,
+    DetailsPage
   ],
   imports: [
     BrowserModule,
@@ -64,7 +66,8 @@ import { QuestionPage } from '../pages/question/question';
     RegisterPage,
     UserPage,
     HeadfacePage,
-    QuestionPage
+    QuestionPage,
+    DetailsPage
   ],
   providers: [
     StatusBar,
