@@ -29,6 +29,8 @@ import { Camera } from '@ionic-native/camera';
 import { QuestionPage } from '../pages/question/question';
 import { DetailsPage } from '../pages/details/details';
 import { AnswerPage } from '../pages/answer/answer';
+import { ChatdetailsPage } from '../pages/chatdetails/chatdetails';
+import { EmojiProvider } from '../providers/emoji/emoji';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,8 @@ import { AnswerPage } from '../pages/answer/answer';
     HeadfacePage,
     QuestionPage,
     DetailsPage,
-    AnswerPage
+    AnswerPage,
+    ChatdetailsPage
   ],
   imports: [
     BrowserModule,
@@ -70,7 +73,8 @@ import { AnswerPage } from '../pages/answer/answer';
     HeadfacePage,
     QuestionPage,
     DetailsPage,
-    AnswerPage
+    AnswerPage,
+    ChatdetailsPage
   ],
   providers: [
     StatusBar,
@@ -80,7 +84,8 @@ import { AnswerPage } from '../pages/answer/answer';
     File,
     Transfer,
     FilePath,
-    Camera
+    Camera,
+    EmojiProvider
   ]
 })
 export class AppModule { }
