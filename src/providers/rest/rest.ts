@@ -142,6 +142,10 @@ export class RestProvider {
     return this.getUrlReturn(this.apiUrlAnswer + '?userid=' + userId + '&questionid=' + questionId + '&content=' + content);
   }
 
+  getUserNotifications(userId): Observable<string[]> {
+    return this.getUrlReturn(this.apiUrlUserNotifications + '?userid=' + userId);
+  }
+
   /**
    * 全局获取 HTTP 请求的方法
    * @Parry
