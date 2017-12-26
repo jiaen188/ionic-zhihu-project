@@ -20,17 +20,24 @@ import { IonicStorageModule } from '@ionic/storage';
 import { RegisterPage } from '../pages/register/register';
 import { UserPage } from '../pages/user/user';
 import { HeadfacePage } from '../pages/headface/headface';
+import { QuestionPage } from '../pages/question/question';
+import { DetailsPage } from '../pages/details/details';
+import { AnswerPage } from '../pages/answer/answer';
+import { ChatdetailsPage } from '../pages/chatdetails/chatdetails';
+
+// 导入表情的provider
+import { EmojiProvider } from '../providers/emoji/emoji';
+import { ComponentsModule } from '../components/components.module'
 
 // 导入四个外部加载进来的组件， 具体的安装方法在09-01
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
-import { QuestionPage } from '../pages/question/question';
-import { DetailsPage } from '../pages/details/details';
-import { AnswerPage } from '../pages/answer/answer';
-import { ChatdetailsPage } from '../pages/chatdetails/chatdetails';
-import { EmojiProvider } from '../providers/emoji/emoji';
+import { ChatserviceProvider } from '../providers/chatservice/chatservice';
+
+// 在typescript中引入javascript方法看这个文件
+import { RelativetimePipe } from '../pipes/relativetime/relativetime';
 
 @NgModule({
   declarations: [
@@ -48,7 +55,8 @@ import { EmojiProvider } from '../providers/emoji/emoji';
     QuestionPage,
     DetailsPage,
     AnswerPage,
-    ChatdetailsPage
+    ChatdetailsPage,
+    RelativetimePipe
   ],
   imports: [
     BrowserModule,
@@ -56,6 +64,7 @@ import { EmojiProvider } from '../providers/emoji/emoji';
     IonicModule.forRoot(MyApp, {
       backButtonText: '返回',
     }),
+    ComponentsModule,
     IonicStorageModule.forRoot() // 全局定义 storage 的模块
   ],
   bootstrap: [IonicApp],
@@ -85,7 +94,8 @@ import { EmojiProvider } from '../providers/emoji/emoji';
     Transfer,
     FilePath,
     Camera,
-    EmojiProvider
+    EmojiProvider,
+    ChatserviceProvider
   ]
 })
 export class AppModule { }
