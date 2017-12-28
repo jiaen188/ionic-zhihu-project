@@ -38,6 +38,8 @@ import { ChatserviceProvider } from '../providers/chatservice/chatservice';
 
 // 在typescript中引入javascript方法看这个文件
 import { RelativetimePipe } from '../pipes/relativetime/relativetime';
+import { UserdatalistPage } from '../pages/userdatalist/userdatalist';
+import { SettingsProvider } from '../providers/settings/settings';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { RelativetimePipe } from '../pipes/relativetime/relativetime';
     DetailsPage,
     AnswerPage,
     ChatdetailsPage,
-    RelativetimePipe
+    RelativetimePipe,
+    UserdatalistPage
   ],
   imports: [
     BrowserModule,
@@ -83,7 +86,8 @@ import { RelativetimePipe } from '../pipes/relativetime/relativetime';
     QuestionPage,
     DetailsPage,
     AnswerPage,
-    ChatdetailsPage
+    ChatdetailsPage,
+    UserdatalistPage
   ],
   providers: [
     StatusBar,
@@ -95,7 +99,8 @@ import { RelativetimePipe } from '../pipes/relativetime/relativetime';
     FilePath,
     Camera,
     EmojiProvider,
-    ChatserviceProvider
+    ChatserviceProvider,
+    SettingsProvider
   ]
 })
 export class AppModule { }

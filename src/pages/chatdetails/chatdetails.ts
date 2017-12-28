@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, Content, TextInput } from 'ionic-angular';
+import { NavController, NavParams, Content, TextInput } from 'ionic-angular';
 import { ChatserviceProvider, ChatMessage } from '../../providers/chatservice/chatservice';
 import { Storage } from '@ionic/storage';
 import { RestProvider } from '../../providers/rest/rest';
@@ -11,7 +11,6 @@ import { Events } from 'ionic-angular/util/events';
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
-// @IonicPage()
 @Component({
   selector: 'page-chatdetails',
   templateUrl: 'chatdetails.html',

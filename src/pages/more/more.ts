@@ -7,6 +7,8 @@ import { BaseUI } from '../../common/baseui';
 import { LoadingController } from 'ionic-angular/components/loading/loading-controller';
 import { RestProvider } from '../../providers/rest/rest';
 import { UserPage } from '../user/user';
+import { UserdatalistPage } from '../userdatalist/userdatalist';
+import { SettingsProvider } from '../../providers/settings/settings';
 
 /**
  * Generated class for the MorePage page.
@@ -25,18 +27,17 @@ export class MorePage extends BaseUI {
   public logined: boolean = false;
   headface: string;
   userinfo: string[];
+  selectedTheme: string;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     public modalCtrl: ModalController,
     public storage: Storage,
     public loadingCtrl: LoadingController,
-    public rest: RestProvider) {
+    public rest: RestProvider,
+    public settings: SettingsProvider) {
     super();
-  }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MorePage');
+    this.settings.getActiveTheme().subscribe(val => this.selectedTheme = val);
   }
 
   showModal() {
@@ -48,7 +49,8 @@ export class MorePage extends BaseUI {
     modal.present();
   }
 
-  ionViewDidEnter() {
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad MorePage');
     this.loadMorePage();
   }
 
@@ -74,8 +76,20 @@ export class MorePage extends BaseUI {
     })
   }
 
+  goToDataList(type) {
+    this.navCtrl.push(UserdatalistPage, { 'dataType': type });
+  }
+
   goToUserPage() {
     this.navCtrl.push(UserPage);
+  }
+
+  toggleChangeTheme() {
+    if (this.selectedTheme === 'dark-theme') {
+      this.settings.setActiveTheme('light-theme');
+    } else {
+      this.settings.setActiveTheme('dark-theme');
+    }
   }
 
 }

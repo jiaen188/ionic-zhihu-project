@@ -38,7 +38,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  orange: orange,
+  purple: purple
 );
 
 
@@ -88,4 +90,8 @@ $colors: (
 @import "noto-sans";
 
 //导入你自定义的样式
-@import "light";
+// @import "light";
+
+// 导入两套主题样式
+@import "theme.light";
+@import "theme.dark";
