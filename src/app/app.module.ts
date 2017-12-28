@@ -34,12 +34,16 @@ import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { Camera } from '@ionic-native/camera';
+import { QRScanner } from '@ionic-native/qr-scanner';
+import { AppVersion } from '@ionic-native/app-version';
 import { ChatserviceProvider } from '../providers/chatservice/chatservice';
 
 // 在typescript中引入javascript方法看这个文件
 import { RelativetimePipe } from '../pipes/relativetime/relativetime';
 import { UserdatalistPage } from '../pages/userdatalist/userdatalist';
 import { SettingsProvider } from '../providers/settings/settings';
+import { ScanPage } from '../pages/scan/scan';
+import { VersionsPage } from '../pages/versions/versions';
 
 @NgModule({
   declarations: [
@@ -59,7 +63,9 @@ import { SettingsProvider } from '../providers/settings/settings';
     AnswerPage,
     ChatdetailsPage,
     RelativetimePipe,
-    UserdatalistPage
+    UserdatalistPage,
+    ScanPage,
+    VersionsPage
   ],
   imports: [
     BrowserModule,
@@ -87,7 +93,9 @@ import { SettingsProvider } from '../providers/settings/settings';
     DetailsPage,
     AnswerPage,
     ChatdetailsPage,
-    UserdatalistPage
+    UserdatalistPage,
+    ScanPage,
+    VersionsPage
   ],
   providers: [
     StatusBar,
@@ -98,6 +106,8 @@ import { SettingsProvider } from '../providers/settings/settings';
     Transfer,
     FilePath,
     Camera,
+    QRScanner,
+    AppVersion,
     EmojiProvider,
     ChatserviceProvider,
     SettingsProvider
