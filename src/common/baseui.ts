@@ -26,7 +26,9 @@ export abstract class BaseUI {
             content: message,
             dismissOnPageChange: true // 页面变化的时候关闭loading
         });
-        loader.present();
+        loader.present().then(() => {
+            
+        });
         return loader;
     }
 
