@@ -133,7 +133,7 @@ ionic serve
 |
     |——index.html                                       //首页
 |
-
+```
 
 
 **github 上的 README.md 持续的会完善 ... ...**
