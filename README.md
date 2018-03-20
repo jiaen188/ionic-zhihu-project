@@ -37,6 +37,7 @@ ionic serve
 如果想要打包成app请从官网中(https://ionicframework.com/getting-started)根据不同操作系统配置不同的环境
 
 <hr><h3>四、目录结构</h3>
+
 ```
 |——node_modules                                         //npm项目依赖
 
@@ -133,6 +134,7 @@ ionic serve
 |
     |——index.html                                       //首页
 |
+
 ```
 
 
